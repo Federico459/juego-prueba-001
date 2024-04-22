@@ -1,12 +1,15 @@
 import { Application, Sprite } from 'pixi.js'
 
-const app = new Application<HTMLCanvasElement>({
+export const WIDTH = 1920;
+export const HEIGHT = 1080;
+
+const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
 	resolution: window.devicePixelRatio || 1,
 	autoDensity: true,
 	backgroundColor: 0x6495ed,
-	width: 640,
-	height: 480
+	width: WIDTH,
+	height: HEIGHT
 });
 
 const clampy: Sprite = Sprite.from("clampy.png");
